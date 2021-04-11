@@ -7,7 +7,7 @@ i=0
 while i<=100:
   lista.append(i)
   i= i +1
-print(lista)
+
 
 
 
@@ -17,6 +17,15 @@ print(lista)
 
 Hasta el número 50.
 """
+acumulado = []
+i=2
+var = '1'
+acumulado.append(var)
+while i<= 50:
+  var = var + " " + str(i)
+  acumulado.append(var)
+  i = i + 1
+
 
 
 
@@ -24,7 +33,9 @@ Hasta el número 50.
 """Guarde en `suma100` el entero de la suma de todos los números entre 1 y 100:
 """
 
-
+suma100= 0
+for x in range(101):
+  suma100 = suma100 + x
 
 
 
@@ -35,7 +46,10 @@ separados por coma, así:
 '134,268,...'
 
 """
-
+tabla100 = "134"
+for x in range(2,11):
+  num = "," + str(134*x) 
+  tabla100 = tabla100 + num
 
 
 
@@ -46,6 +60,10 @@ está ordenada).
 """
 lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 132, 150, 180, 201, 203, 231, 250, 260, 267, 300, 304, 310, 312, 321, 326]
 
+multiplos3 = 0
+for x in lista1:
+  if(x%3 == 0):
+    multiplos3 = multiplos3 +1
 
 
 
@@ -64,8 +82,11 @@ lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 
   '1'
 ]
 """
-
-
+regresivo50 = []
+resp = ' '
+for x in range(51):
+  regresivo50.append(resp.join(str(e) for e in list(reversed(range(1,51-x))) ))
+  
 
 
 
@@ -74,8 +95,8 @@ lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 
 `invertido` (sin hacer uso de la función `reversed` ni del método `reverse`)
 """
 lista2 = list(range(1, 70, 5))
-
-
+print(list(range(1, 70, 5)))
+print(list(range(70, 1, -5)))
 
 
 
